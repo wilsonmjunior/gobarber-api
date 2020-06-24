@@ -4,9 +4,11 @@ import routes from './routes';
 import 'reflect-metadata';
 
 import './database';
+import uploadConfig from './config/upload';
 
 const app = express();
 
+app.use(express.static(uploadConfig.directory));
 app.use(express.json());
 
 app.use(routes);
