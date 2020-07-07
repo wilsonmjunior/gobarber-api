@@ -19,31 +19,16 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/melquisedecfelipe/gobarber
+$ git clone https://github.com/wilsonmjunior/go-barber-nodejs
 
 # Go into the repository
-$ cd gobarber
+$ cd go-barber-nodejs
 
 # Go into the backend and install dependencies
 $ cd backend && yarn
 
 # Run backend
 $ yarn dev:server
-
-# Go into the frontend and install dependencies
-$ cd frontend && yarn
-
-# Run frontend
-$ yarn start
-
-# Go into the mobile and install dependencies
-$ cd mobile && yarn
-
-# Run app (ios)
-$ yarn ios
-
-# Run app (android)
-$ yarn android
 ```
 
 ## :memo: License
