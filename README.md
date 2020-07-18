@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://res.cloudinary.com/dhqnvbd52/image/upload/v1594129504/logo_zb1fbe.svg" alt="GoBarber" width="500" />
+  <img src="https://res.cloudinary.com/dhqnvbd52/image/upload/v1594130509/GoBarber/logo_l1zdif.svg" alt="GoBarber" width="500" />
 </h1>
 <p align="center">🏗 in development</p> 
 
