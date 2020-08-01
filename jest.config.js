@@ -12,8 +12,8 @@ module.exports = {
   // cacheDirectory: "C:\\Users\\Wilson Junior\\AppData\\Local\\Temp\\jest",
 
   // Automatically clear mock calls and instances between every test
+  setupFiles: ["dotenv/config"],
   clearMocks: true,
-
   // Indicates whether the coverage information should be collected while executing the test
   collectCoverage: true,
 
@@ -31,7 +31,7 @@ module.exports = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: "babel",
 
   // A list of reporter names that Jest uses when writing coverage reports
   coverageReporters: [

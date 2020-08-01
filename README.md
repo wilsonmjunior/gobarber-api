@@ -52,8 +52,9 @@
 **RF**
 
 - O usuário deve poder listar prestadores de serviço cadastrados;
-- O usuário deve poder listar os dias de um mês com pelo menos um horário disponível de um prestador;
-- O usuário deve poder listar horários disponiveis em um dia especifico de um prestador;
+- O usuário deve poder listar os dias de um mês com pelo menos um horário disponível de um prestador (Listando dias disponiveis);
+- O usuário deve poder listar horários disponiveis em um dia especifico de um prestador(Listando horarios disponiveis);
+
 - O usuário deve poder realizar um novo agendamento com um prestador;
 
 **RNF**
@@ -62,8 +63,8 @@
 
 **RN**
 
-- Cada agendamento deve dura 1h exatamente;
 - Os agendamentos devem estar disponíveis entre 8h - 18h (Primeiro às 8h e o último às 17h);
-- O usuário não pode agendat em um horário já ocupado;
-- O usuário não pode agendat em um horário que já passou;
-- O usuário não pode agendat serviços consigo mesmo;
+- O usuário não pode agendar em um horário que já passou;
+- O usuário não pode agendar em um horário já ocupado;
+- O usuário não pode agendar serviços consigo mesmo;
+- Cada agendamento deve dura 1h exatamente;

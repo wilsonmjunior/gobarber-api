@@ -1,8 +1,12 @@
 import 'reflect-metadata';
+import 'dotenv/config';
 
 import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
+import { errors } from 'celebrate';
 import 'express-async-errors';
+
+import AppError from '@shared/errors/AppError';
 
 import routes from '@shared/infra/http/routes';
 
@@ -10,13 +14,17 @@ import '@shared/container';
 import '../typeorm';
 
 import uploadConfig from '@config/upload';
-import AppError from '@shared/errors/AppError';
+import rateLimiter from '@shared/infra/http/middlewares/rateLimiter';
 
 const app = express();
+
+app.use(rateLimiter);
 app.use(cors());
-app.use(express.static(uploadConfig.uploadsFolder));
+app.use('/files', express.static(uploadConfig.uploadsFolder));
+
 app.use(express.json());
 app.use(routes);
+app.use(errors());
 
 app.use(
   (error: Error, request: Request, response: Response, _: NextFunction) => {
@@ -25,6 +33,10 @@ app.use(
         status: 'error',
         error: error.message,
       });
+    }
+
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(error);
     }
 
     return response.status(500).json({
