@@ -1,4 +1,5 @@
 import { Response, Request } from 'express';
+import { classToClass } from 'class-transformer';
 
 import ListProviderAPpointmentsService from '@modules/appointments/services/ListProviderAppointmentsService';
 import { container } from 'tsyringe';
@@ -19,6 +20,6 @@ export default class ProviderAppointmentsController {
       day: Number(day),
     });
 
-    return response.json(appointments);
+    return response.json(classToClass(appointments));
   }
 }

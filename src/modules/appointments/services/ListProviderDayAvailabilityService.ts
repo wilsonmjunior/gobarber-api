@@ -41,7 +41,7 @@ class ListProviderDayAvailabilityService {
 
     const eachHourArray = Array.from(
       { length: 10 },
-      (I_, index) => index + hourStart,
+      (_, index) => index + hourStart,
     );
 
     const currentDate = new Date(Date.now());
