@@ -2,9 +2,6 @@
   <img src="https://res.cloudinary.com/dhqnvbd52/image/upload/v1594130509/GoBarber/logo_l1zdif.svg" alt="GoBarber" width="500" />
 </h1>
 
-## Project Status
-<p align="center">🏗 in development</p> 
-
 ## Setting up Databases 
 
 The project uses [PostgreSQL](https://www.postgresql.org/).
