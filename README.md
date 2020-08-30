@@ -52,6 +52,7 @@ $ yarn dev:server
 - [Typeorm](https://typeorm.io/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Docker](https://www.docker.com/docker-community)
+- [Redis](https://www.redis.io)
 
 ## :memo: License
 This project is under the MIT license. See the [LICENSE](https://github.com/wilsonmjunior/go-barber-nodejs/blob/master/LICENSE) for more information.
