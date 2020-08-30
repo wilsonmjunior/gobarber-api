@@ -1,3 +1,5 @@
+import { classToClass } from 'class-transformer';
+
 import FakeCacheProvider from '@shared/container/providers/CacheProvider/fakes/FakeCacheProvider';
 import FakeUsersRepository from '@modules/users/repositories/fakes/FakeUsersRepository';
 import ListProvidersService from './ListProvidersService';
@@ -65,10 +67,10 @@ describe('ListProviders', () => {
       user_id: loggedUser.id,
     });
 
-    expect(saveCache).toHaveBeenCalledWith(`providers-list:${loggedUser.id}`, [
-      user1,
-      user2,
-    ]);
+    expect(saveCache).toHaveBeenCalledWith(
+      `providers-list:${loggedUser.id}`,
+      classToClass([user1, user2]),
+    );
   });
 
   it('should be able recover list of cached provider', async () => {

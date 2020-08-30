@@ -21,7 +21,7 @@ class UpdateProfileService {
     private usersRepository: IUsersRepository,
 
     @inject('HashProvider')
-    private hashProvider: IHashProvider,
+    private hashProvider: IHashProvider
   ) {}
 
   public async execute({
