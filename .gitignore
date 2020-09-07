@@ -11,3 +11,4 @@ ormconfig.json
 
 tmp/*
 !tmp/.gitkeep
+ormconfig.json
