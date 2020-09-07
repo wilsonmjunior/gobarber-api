@@ -49,7 +49,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           script: | 
-            cd ~ /app/gobarber-api
+            cd ~/app/gobarber-api
             yarn
       
       - name: Run migrations on Digital Ocean
@@ -60,7 +60,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           script: | 
-            cd ~ /app/gobarber-api
+            cd ~/app/gobarber-api
             ./node_modules/.bin/typeorm migration:run
             
       - name: Restart server on Digital Ocean
